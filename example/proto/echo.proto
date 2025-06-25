@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package echo;
+
+option go_package = "github.com/ajaypanthagani/protoc-gen-qkrpc/example/proto;echo";
+
+message HelloRequest {
+  string message = 1;
+}
+
+message HelloResponse {
+  string reply = 1;
+}
+
+service Echo {
+  rpc SayHello(HelloRequest) returns (HelloResponse);
+}
