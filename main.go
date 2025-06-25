@@ -51,7 +51,7 @@ func genService(g *protogen.GeneratedFile, file *protogen.File, service *protoge
 
 	// Server registration
 	regFuncName := "Register" + serviceName
-	g.P("func ", regFuncName, "(s *qkrpc.QkServer, impl ", serviceName, ") {")
+	g.P("func ", regFuncName, "(s qkrpc.QkServer, impl ", serviceName, ") {")
 	for _, method := range service.Methods {
 		methodName := fmt.Sprintf("%s.%s", fullServiceName, method.Desc.Name())
 		g.P("  s.RegisterHandler(\"", methodName, "\", func(ctx context.Context, stream *quic.Stream) error {")

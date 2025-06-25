@@ -6,7 +6,7 @@ A protoc plugin to generate client stubs from proto for qkrpc framework
 Make sure Go 1.20+ is installed and in your PATH.
 
 ```bash
-go install github.com/ajaypanthagani/protoc-gen-qkrpc@latest
+go install github.com/ajaypanthagani/protoc-gen-qkrpc@HEAD
 ```
 
 ## Generate stubs
